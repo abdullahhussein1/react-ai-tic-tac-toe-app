@@ -268,7 +268,7 @@ function createSquares(squares, handleClick, winner) {
     arr.push(
       <Square
         key={index}
-        color={
+        bgColor={
           winner && (index == a || index == b || index == c)
             ? "bg-green-100 text-green-500 hover:bg-green-200/70"
             : "bg-white"
