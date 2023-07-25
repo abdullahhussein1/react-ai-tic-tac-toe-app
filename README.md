@@ -1,5 +1,8 @@
 # Ai react tic tac toe
 play an enjoyable game , tic tac toe, easy to learn, fun to play, and usefull for logic 
+
+![Alt Text](https://github.com/abdullahhussein1/react-ai-tic-tac-toe-app/blob/main/src/assets/img1.png)
+
 # Play now
 https://maestro-ai-tic-tac-toe-app.netlify.app/
 # Modern UI
