@@ -99,6 +99,7 @@ function Board() {
                 if (!aiIsPlaying) {
                   setAiIsPlaying(true);
                   setHistory([Array(9).fill(null)]);
+                  setXIsNext(true);
                 }
               }}
             >
@@ -111,6 +112,7 @@ function Board() {
                 if (aiIsPlaying) {
                   setAiIsPlaying(false);
                   setHistory([Array(9).fill(null)]);
+                  setXIsNext(true);
                 }
               }}
             >
