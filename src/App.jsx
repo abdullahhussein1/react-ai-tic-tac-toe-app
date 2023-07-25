@@ -96,8 +96,10 @@ function Board() {
               className="flex gap-4 hover:gap-5 transition-all w-full rounded-md hover:bg-slate-100"
               icon={AiFillRobot}
               onClick={() => {
-                setAiIsPlaying(true);
-                setHistory([Array(9).fill(null)]);
+                if (!aiIsPlaying) {
+                  setAiIsPlaying(true);
+                  setHistory([Array(9).fill(null)]);
+                }
               }}
             >
               vs. Ai
@@ -106,8 +108,10 @@ function Board() {
               className="flex gap-4 hover:gap-5 transition-all w-full  rounded-md hover:bg-slate-100"
               icon={BsFillPersonFill}
               onClick={() => {
-                setAiIsPlaying(false);
-                setHistory([Array(9).fill(null)]);
+                if (aiIsPlaying) {
+                  setAiIsPlaying(false);
+                  setHistory([Array(9).fill(null)]);
+                }
               }}
             >
               vs. Player
