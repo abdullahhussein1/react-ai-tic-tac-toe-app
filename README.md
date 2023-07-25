@@ -1,8 +1,8 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Ai react tic tac toe
+play an enjoyable game , tic tac toe, easy to learn, fun to play, and usefull for logic 
+# Play now
+https://maestro-ai-tic-tac-toe-app.netlify.app/
+# Modern UI
+this game UI is designed with peacefull and relaxing colors using tailwind CSS
+# play with Ai or your friend
+you can choose to play with ai or with your friend 
