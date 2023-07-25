@@ -51,14 +51,14 @@ function Board() {
   if (winner) {
     if (xIsNext) {
       status = (
-        <div className="flex gap-2 items-center text-green-400 bg-green-400/10 rounded-xl px-3 py-1 scale-110 transition-all delay-200">
+        <div className="flex gap-2 items-center text-green-500  rounded-xl px-3 py-1 scale-110 transition-all delay-200">
           <p>Winner: </p>
           <BiCircle className="stroke-slate-700 scale-110" />
         </div>
       );
     } else {
       status = (
-        <div className="flex gap-2 items-center text-green-400 bg-green-400/10 rounded-xl px-3 py-1 scale-110 transition-all">
+        <div className="flex gap-2 items-center text-green-500  rounded-xl px-3 py-1 scale-110 transition-all">
           <p>Winner: </p>
           <CgClose className="stroke-slate-700 scale-110" />
         </div>
@@ -125,10 +125,10 @@ function Board() {
         </h1>
 
         <div className="grid grid-cols-3 shadow-2xl shadow-slate-300 rounded-3xl overflow-clip gap-1">
-          {createSquares(squares, handleClick)}
+          {createSquares(squares, handleClick, winner)}
         </div>
         <button
-          onClick={() => onRestart(setHistory, setXIsNext)}
+          onClick={() => onRestart(setHistory, setXIsNext, (restart = null))}
           className="absolute text-slate-700 scale-150 hover:-rotate-[360deg] hover:bg-white/60 rounded-full p-2 transition-transform duration-500 -bottom-24"
         >
           {restart}
@@ -259,11 +259,20 @@ function calculateWinner(squares) {
   return null;
 }
 
-function createSquares(squares, handleClick) {
+function createSquares(squares, handleClick, winner) {
+  let a, b, c;
+  if (winner) {
+    [a, b, c] = winner;
+  }
   return squares.reduce((arr, value, index) => {
     arr.push(
       <Square
         key={index}
+        color={
+          winner && (index == a || index == b || index == c)
+            ? "bg-green-100 text-green-500 hover:bg-green-200/70"
+            : "bg-white"
+        }
         value={squares[index]}
         onSquareClick={() => {
           handleClick(index);
