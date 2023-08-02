@@ -51,16 +51,16 @@ function Board() {
   if (winner) {
     if (xIsNext) {
       status = (
-        <div className="flex gap-2 items-center text-green-500  rounded-xl px-3 py-1 scale-110 transition-all delay-200">
+        <div className="flex gap-2 items-center text-green-400  rounded-xl px-3 py-1 scale-110 transition-all delay-200">
           <p>Winner: </p>
-          <BiCircle className="stroke-slate-700 scale-110" />
+          <BiCircle className=" scale-110" />
         </div>
       );
     } else {
       status = (
-        <div className="flex gap-2 items-center text-green-500  rounded-xl px-3 py-1 scale-110 transition-all">
+        <div className="flex gap-2 items-center text-green-400  rounded-xl px-3 py-1 scale-110 transition-all">
           <p>Winner: </p>
-          <CgClose className="stroke-slate-700 scale-110" />
+          <CgClose className=" scale-110" />
         </div>
       );
     }
@@ -71,14 +71,14 @@ function Board() {
       status = (
         <div className="flex gap-2 items-center transition-all">
           <p>Next player: </p>
-          <CgClose className="stroke-slate-700 scale-110" />
+          <CgClose className=" scale-110" />
         </div>
       );
     } else {
       status = (
         <div className="flex gap-2 items-center transition-all">
           <p>Next player: </p>
-          <BiCircle className="stroke-slate-700 scale-110" />
+          <BiCircle className=" scale-110" />
         </div>
       );
     }
