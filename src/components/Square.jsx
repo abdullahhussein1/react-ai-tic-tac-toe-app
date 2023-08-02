@@ -6,7 +6,7 @@ const Square = ({ value, onSquareClick, bgColor }) => {
   return (
     <button
       onClick={onSquareClick}
-      className={`flex justify-center items-center w-28 h-28 text-4xl lg:w-36 lg:h-36 lg:text-5xl text-slate-700 font-bold ${bgColor} hover:bg-white/60 active:scale-95 transition-all`}
+      className={`flex justify-center items-center w-28 h-28 text-4xl lg:w-36 lg:h-36 lg:text-5xl text-slate-700 font-bold ${bgColor}  active:scale-95 transition-all`}
     >
       {styleValue(value)}
     </button>

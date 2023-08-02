@@ -270,8 +270,8 @@ function createSquares(squares, handleClick, winner) {
         key={index}
         bgColor={
           winner && (index == a || index == b || index == c)
-            ? "bg-green-100 text-green-500 hover:bg-green-200/70"
-            : "bg-white"
+            ? "bg-green-100 text-green-500"
+            : "bg-white hover:bg-white/60"
         }
         value={squares[index]}
         onSquareClick={() => {
